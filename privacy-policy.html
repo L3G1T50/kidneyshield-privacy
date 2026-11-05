@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — KidneyShield</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:        #01696f;
+      --teal-dark:   #00474d;
+      --teal-light:  #e0f2f1;
+      --bg:          #f4f6f8;
+      --surface:     #ffffff;
+      --border:      #dde3e7;
+      --text:        #1a2530;
+      --text-muted:  #546e7a;
+      --text-faint:  #90a4ae;
+      --radius:      12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:         #0f1419;
+        --surface:    #1a2332;
+        --border:     #2e4055;
+        --text:       #e8edf2;
+        --text-muted: #8fa8be;
+        --text-faint: #4a6478;
+        --teal:       #4f98a3;
+        --teal-light: #0d2b28;
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--teal);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 16px;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Meta bar ── */
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      margin-bottom: 40px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .meta span { display: flex; align-items: center; gap: 6px; }
+
+    .badge {
+      background: var(--teal-light);
+      color: var(--teal);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 99px;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Section cards ── */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--teal-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--teal);
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.2px;
+    }
+
+    p { color: var(--text-muted); margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    ul li {
+      display: flex;
+      gap: 10px;
+      color: var(--text-muted);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--teal-light);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 0.93rem;
+      color: var(--text);
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--teal);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .contact-card h2 { color: #fff; margin-bottom: 8px; font-size: 1.1rem; }
+    .contact-card p { color: rgba(255,255,255,0.85); margin-bottom: 16px; }
+
+    .contact-card a {
+      display: inline-block;
+      background: #fff;
+      color: var(--teal-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover { opacity: 0.92; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-faint);
+      padding: 0 24px 40px;
+    }
+
+    footer a { color: var(--teal); text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .section { padding: 20px 18px; }
+      header { padding: 36px 18px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+  </div>
+  <h1>KidneyShield Privacy Policy</h1>
+  <p>Your health data stays on your device unless you choose to share it.</p>
+</header>
+
+<div class="container">
+
+  <div class="meta">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Effective date: November 5, 2026
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Developer: Nicola Lacaprara
+    </span>
+    <span class="badge">Android</span>
+    <span class="badge">Health App</span>
+  </div>
+
+  <!-- 1. Overview -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <h2>Overview</h2>
+    </div>
+    <p>KidneyShield (&ldquo;the App&rdquo;) is a kidney stone prevention companion built by Nicola Lacaprara (&ldquo;Developer,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;). This policy explains what data the App accesses, how it is stored, and your rights over it.</p>
+    <div class="highlight">
+      &#128274; KidneyShield does <strong>not</strong> transmit your health data to any server. Your health information is stored locally on your device and encrypted at rest, apart from the short-lived export copy described below.
+    </div>
+  </div>
+
+  <!-- 2. Data We Collect -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      </div>
+      <h2>Data You Enter (Stored Locally Only)</h2>
+    </div>
+    <p>The following data is entered voluntarily by you and stored on your device. KidneyShield never uploads it, and it leaves your device only if you export a report and choose where to send it:</p>
+    <ul>
+      <li>Daily water intake logs</li>
+      <li>Dietary oxalate intake and food logs</li>
+      <li>Pain journal entries (pain level, side, notes, symptoms)</li>
+      <li>Stone-passed events</li>
+      <li>Historical progress data</li>
+      <li>App preferences (dark mode, daily hydration goal, notification settings)</li>
+      <li>Your stone type and your daily water and oxalate goals</li>
+      <li>Optional profile details: your name and a profile photo</li>
+    </ul>
+    <p>KidneyShield has no accounts and does not ask for your email address or your location. During setup you can optionally enter a name and choose a profile photo. Your name is used only to label the reports you choose to share: it appears as the patient name on an exported PDF report and in the Doctor&rsquo;s View text summary. Your photo is shown on the Home screen. Your name is kept in encrypted on-device storage, and neither your name nor your photo is uploaded by KidneyShield.</p>
+    <p>A report you export and send is your own choice: it contains your name if you entered one, your goals and your oxalate and water figures for the period you pick (a PDF report also shows your stone type), and it is then held by whichever app or person you send it to. While a report is being prepared and shared, a temporary unencrypted copy is kept in the app&rsquo;s private storage. It is deleted shortly after sharing, or the next time the app starts.</p>
+  </div>
+
+  <!-- 3. How Data Is Stored -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <h2>How Your Data Is Protected</h2>
+    </div>
+    <p>Your health data is protected using industry-standard encryption:</p>
+    <ul>
+      <li><div><strong>Journal entries, food logs, water logs and the daily history built from them</strong> are stored in an AES-256 encrypted SQLite database (SQLCipher). The encryption key is generated using a cryptographically secure random number generator and protected by Android Keystore (hardware-backed on devices that support it) via FlutterSecureStorage.</div></li>
+      <li><div><strong>Preferences and profile settings</strong> (theme, goals, reminder settings, stone type and your optional name) are encrypted with AES-256-GCM before they are saved, using a key that is also protected by Android Keystore via FlutterSecureStorage.</div></li>
+      <li><div><strong>Your profile photo</strong>, if you choose one, is kept as an ordinary image file in the app&rsquo;s private storage. It is not separately encrypted.</div></li>
+    </ul>
+    <div class="highlight">
+      Your encryption keys are protected by Android Keystore and are not accessible to the Developer.
+    </div>
+  </div>
+
+  <!-- 4. Third-Party Services -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      </div>
+      <h2>Third-Party Services</h2>
+    </div>
+    <p>KidneyShield uses the following third-party services. Where a service receives any data, its privacy policy is linked:</p>
+    <ul>
+      <li>
+        <div>
+          <strong>Google Play</strong> &mdash; processes subscription payments. Receives purchase information only. Receives NO health data. <a href="https://policies.google.com/privacy">Google privacy policy</a>.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>RevenueCat</strong> &mdash; in-app purchase management and subscription status verification. The app starts RevenueCat for every user, including users who never buy. RevenueCat receives a random anonymous ID, your purchase history and purchase tokens, technical details of your device and app (device model and brand, Android version, app version, language and store country) and, as with any internet request, your IP address. KidneyShield does not give it your name or email address. Receives NO health data. <a href="https://www.revenuecat.com/privacy">RevenueCat privacy policy</a>.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Google Fonts (Inter)</strong> &mdash; fonts are bundled with the app and loaded locally. No network requests are made for fonts at runtime.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Flutter Local Notifications</strong> &mdash; schedules and displays reminders entirely on-device. No data leaves your device.
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 5. Permissions -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <h2>App Permissions</h2>
+    </div>
+    <p>KidneyShield requests only the permissions it needs:</p>
+    <ul>
+      <li><div><strong>Post Notifications</strong> &mdash; required to show reminder notifications on Android 13+. No notifications are sent without your permission.</div></li>
+      <li><div><strong>Receive Boot Completed</strong> &mdash; restores your reminders after your phone restarts.</div></li>
+      <li><div><strong>Vibrate</strong> &mdash; lets reminder notifications vibrate.</div></li>
+      <li><div><strong>Camera</strong> &mdash; optional. Android asks for it only if you choose to take a profile photo. Choosing a photo from your gallery does not need it.</div></li>
+      <li><div><strong>Internet</strong> &mdash; required for RevenueCat subscription verification. KidneyShield never sends your health data over the internet itself.</div></li>
+      <li><div><strong>Access Network State</strong> &mdash; lets the subscription libraries check whether you are online.</div></li>
+      <li><div><strong>Google Play Billing</strong> &mdash; lets you buy a subscription through Google Play.</div></li>
+    </ul>
+  </div>
+
+  <!-- 6. Children -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h2>Children&rsquo;s Privacy (COPPA)</h2>
+    </div>
+    <p>KidneyShield is intended for users aged 13 and older. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has used the app, please contact us and we will provide guidance on deleting any locally stored data.</p>
+  </div>
+
+  <!-- 7. Data Deletion -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+      </div>
+      <h2>Deleting Your Data</h2>
+    </div>
+    <p>Your health data is kept on your device until you delete it or uninstall the app. The Developer has no copy of it. You can remove it as follows:</p>
+    <ul>
+      <li><div>You can delete individual journal entries from the Journal tab. The Journal tab needs an active subscription. If yours has ended, you can remove your journal by clearing the app&rsquo;s storage in Android Settings (this removes all app data) or by uninstalling the app.</div></li>
+      <li>You can delete individual food-log entries from the Log Food tab.</li>
+      <li>You can reset today&rsquo;s food and water logs from the Home tab (the &ldquo;Reset today&rsquo;s logs&rdquo; button). This cannot be undone.</li>
+      <li><div>Past days&rsquo; water logs and your profile photo cannot be removed one at a time. To remove them, clear the app&rsquo;s storage in Android Settings or uninstall the app. You can change your name or leave it blank under Profile &amp; Goals in Settings.</div></li>
+      <li>KidneyShield has no accounts or servers. To remove everything at once, uninstall the app: this permanently removes all app data from your device. This does not delete reports you already sent to someone, or subscription records held by Google Play and RevenueCat, which are kept under their own policies. RevenueCat may also save its random ID through Google Play services, which can include it in your Google backup, so a purchase can be restored after a reinstall or on a new device. Uninstalling the app may not remove that ID.</li>
+    </ul>
+  </div>
+
+  <!-- 8. Changes -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      </div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this page. Continued use of the app after any changes constitutes your acceptance of the updated policy.</p>
+    <p>For significant changes, we will describe the change in the Play Store release notes.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-card">
+    <h2>Questions or Concerns?</h2>
+    <p>We&rsquo;re happy to answer any questions about this policy or your data. If you email us, we receive your email address and whatever you write, and we use them only to reply.</p>
+    <a href="mailto:l3g1t.dev@gmail.com">l3g1t.dev@gmail.com</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>KidneyShield &copy; 2026 Nicola Lacaprara &nbsp;&middot;&nbsp; <a href="./terms.html">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>
